@@ -28,6 +28,8 @@ exports.nuevoProyecto = (req, res) => {
             nombrePagina: 'Nuevo proyecto',
             errores
         })
+    }else {
+        //insertamos en la base de datos cuando no haya errores
     }
 
 }
