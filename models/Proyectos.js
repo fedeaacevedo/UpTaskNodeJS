@@ -4,16 +4,16 @@ const db = require('../config/db');
 const Proyectos = db.define('proyectos', {
 
     id : {
-        type: Sequelize.INTEGER,
+        type: sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
 
     nombre : {
-        type: Sequelize.STRING,
+        type: sequelize.STRING,
     },
 
     url: {
-        type: Sequelize.STRING
+        type: sequelize.STRING
     }
 });

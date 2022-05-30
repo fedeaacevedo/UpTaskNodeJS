@@ -6,9 +6,12 @@ const bodyParser = require('body-parser');
 //crear conexion a base de datos 
 const db =  require('./config/db')
 
-db.authenticate()
-    .then(() => clg("Conectado al servidor.."))
-    .catch(error => console.log(error) )   
+//importar el modelo
+require('./models/Proyectos');
+
+db.sync()
+    .then(() => console.log("Conectado al servidor.."))
+    .catch(error => console.log(error));   
 
 //creamos una aplicacion de express
 const app = express();
